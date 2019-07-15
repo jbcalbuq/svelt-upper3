@@ -36,7 +36,12 @@ export var router = new Router({
 			component: Insumos,
 			name: 'Insumos'
 		},
-
+		{
+			path: '*',
+			component: Not404,
+			name: '404 Error'
+		},
+				
       ]
 });
 
