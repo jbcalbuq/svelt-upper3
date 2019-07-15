@@ -1,6 +1,4 @@
 
-titleClass   = 'js-Accordion-title',
-contentClass = 'js-Accordion-content';
 
 function onClick(e) {
     if (e.target.className.indexOf(titleClass) === -1) {

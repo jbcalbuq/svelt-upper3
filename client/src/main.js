@@ -3,6 +3,9 @@ import {Router} from 'svelte-easyroute-rollup'
 import Not404 from './pages/404.svelte'
 import Home from './pages/home.svelte'
 import About from './pages/about.svelte'
+import Empresa from './pages/empresa.svelte'
+import Produtos from './pages/produtos.svelte'
+import Insumos from './pages/insumos.svelte'
 
 export var router = new Router({
     base: "", // NOT required
@@ -19,10 +22,21 @@ export var router = new Router({
 			name: 'About me'
 		},
 		{
-			path: '/about',
-			component: Not404,
-			name: 'About me'
-		}
+			path: '/empresa',
+			component: Empresa,
+			name: 'Empresa'
+		},
+		{
+			path: '/produtos',
+			component: Produtos,
+			name: 'Produtos'
+		},
+		{
+			path: '/insumos',
+			component: Insumos,
+			name: 'Insumos'
+		},
+
       ]
 });
 

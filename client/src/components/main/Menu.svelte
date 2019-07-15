@@ -20,10 +20,10 @@ import MAccordion from "./MenuAccordion.svelte";
         title: "Cadastro",
         icon: "cadastro",
         items: [
-          { title: "Empresa", icon: "box", action: "/" },
+          { title: "Empresa", icon: "box", action: "/empresa" },
           { title: "Usuários", icon: "user", action: "/about" },
-          { title: "Produtos", icon: "box", action: "Empresa" },
-          { title: "Insumos", icon: "coffee", action: "Empresa" },
+          { title: "Produtos", icon: "box", action: "/produtos" },
+          { title: "Insumos", icon: "coffee", action: "/insumos" },
           { title: "Ficha Técnica", icon: "file-text", action: "Empresa" },
           { title: "Ficha de Produção", icon: "film", action: "Empresa" },
           { title: "Cardápio", icon: "layers", action: "Empresa" }
