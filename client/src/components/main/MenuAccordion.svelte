@@ -1,6 +1,6 @@
 <script>
   import Icons from "../utils/Icons.svelte";
-  import RouterLink from "svelte-easyroute-rollup/RouterLink.svelte";
+  import RouterLink from "./RouterLink.svelte";
     
   let openTab = 1,
       oneOpen = true,    
@@ -203,3 +203,4 @@ border-right: 1px solid  rgba(0,0,0,0.15);
       </div>    
   {/each}
 </div>
+
