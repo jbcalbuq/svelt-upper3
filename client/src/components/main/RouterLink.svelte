@@ -34,5 +34,6 @@
     div.router-link {
         cursor: pointer;
         display: inline-block;
+        width: 100%;
     }
 </style>

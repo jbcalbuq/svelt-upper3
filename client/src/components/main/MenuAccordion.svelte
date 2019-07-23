@@ -73,6 +73,7 @@ function destroy() {
     margin: 0;
     max-width: 30em;
     width: 100%;
+    z-index: 1000;
     
   }
   .js-Accordion-title {
@@ -143,10 +144,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
   background-color:rgb(41,127,184);
   color:rgb(255,255,255);
   text-decoration: none;
-  
   letter-spacing: 1px;
   margin-bottom: 0px;
-  
   text-shadow:0px 1px 0px rgba(0,0,0,0.5);
 -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true)";zoom:1;
 filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true);
@@ -196,7 +195,7 @@ border-right: 1px solid  rgba(0,0,0,0.15);
            <div class="item">
             <span><Icons data={item.icon}/></span>
          
-            <RouterLink class="item" to={item.action} text={item.title}/>
+            <RouterLink to={item.action} text={item.title}/>
          
            </div>
     {/each}

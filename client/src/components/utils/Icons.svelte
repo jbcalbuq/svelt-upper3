@@ -1,9 +1,26 @@
 <script>
+    import {LoadIcon, Replace} from './icons.js'
+    import { onMount } from 'svelte';
+
+
+
     export let data = "";
-    export let iclass = "feather-16";
+    export let size = "16";
+
+    let element;
+
+    onMount(async () => {
+      //console.log("create", element.parentNode);
+      Replace(data, element, size);
+	 });
+    
+    //srcset={Icon.data['trash2]}
+    //console.log('icons2', Icons);
+    
 </script>
 
 <style>
+/*
   i {
     color: red;
   }
@@ -18,10 +35,15 @@
     height: 24px;
   }
 
-  .feather-32 {
-    width: 32px;
-    height: 32px;
-  }
+  .f
+
+<!--<i class="{iclass}" data-feather={data} />-->
+*/
+
+
 </style>
 
-<i class="{iclass}" id="teste" data-feather={data} />
+<span bind:this={element}/>
+
+
+

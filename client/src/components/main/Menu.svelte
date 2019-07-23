@@ -63,6 +63,7 @@ import MAccordion from "./MenuAccordion.svelte";
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 40px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    z-index: 10000;
   }
 
   /* The navigation menu links */
@@ -196,6 +197,7 @@ import MAccordion from "./MenuAccordion.svelte";
       height: 30px;
       align-items: center;
       width: 100%;
+      z-index: 999;
     }    
    
   }     
@@ -208,6 +210,11 @@ import MAccordion from "./MenuAccordion.svelte";
   .logo-text {
     white-space: nowrap;
   }
+
+  .fixed {
+    position: fixed;
+    width: 100%;
+  }
 </style>
 
 <div id="mySidenav" class="sidenav">
@@ -216,19 +223,16 @@ import MAccordion from "./MenuAccordion.svelte";
       <b class="logo-text">Upper Chef</b>
     </span>
     <a href="javascript:void(0)" class="nav-links" on:click={closeNav}>
-      <Icons iclass="feather-24" data="x" />
+      <Icons size="32" data="x" />
     </a>
   </nav>
   <MAccordion menu={menu} />
 </div>
 
 <!-- Use any element to open the sidenav -->
-<nav class="navbar">
-  <span class="navbar-toggle" id="js-navbar-toggle">
-    <i class="fas fa-bars" />
-  </span>
+<nav class="navbar fixed">
   <span class="logo" on:click={openNav}>
-    <Icons iclass="feather-32" data="menu" />
+    <Icons size="32" data="menu" />
   </span>
   <ul class="main-nav" id="js-menu">
     <li>
